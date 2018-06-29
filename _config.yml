@@ -1,4 +1,5 @@
 # Site settings
+theme: Adawolfs
 title: A blog about lorem ipsum dolor sit amet
 description: A blog about lorem ipsum dolor sit amet
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
