@@ -4,6 +4,7 @@ title:      "Como asi que Docker!?"
 subtitle:   ""
 date:       2018-08-13 12:00:00
 author:     "adawolfs"
+header-img: "assets/img/2018-08-13-como-asi-que-docker/banner.jpg"
 catalog: true
 tags:
     - containers
@@ -30,6 +31,7 @@ En la siguiente imagen pueden observar un diagrama en el cual se denota la difer
 
 
 ![docker-vs-vm.jpg]({{ "/assets/img/2018-08-13-como-asi-que-docker/docker-vs-vm.jpg" | absolute_url }})
+
 
 En el siguiente esquema de bloques podemos ver como esta distribuida una arquitectura de Docker.
 
