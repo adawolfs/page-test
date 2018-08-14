@@ -30,7 +30,7 @@ Estas cualidades han hecho que docker se vea fuertemente involucrado en el desar
 En la siguiente imagen pueden observar un diagrama en el cual se denota la diferencia entre utilizar docker o un sistema de provisionamiento de maquinas virutales.
 
 
-![docker-vs-vm.jpg]({{ "/assets/img/2018-08-13-como-asi-que-docker/docker-vs-vm.jpg" | absolute_url }})
+![docker-vs-vm.jpg]({{"/assets/img/2018-08-13-como-asi-que-docker/docker-vs-vm.jpg" | absolute_url }})
 
 
 En el siguiente esquema de bloques podemos ver como esta distribuida una arquitectura de Docker.

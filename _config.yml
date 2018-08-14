@@ -2,8 +2,7 @@
 #theme: Adawolfs
 title: A blog about that crazy things I do!
 description: A blog about that crazy things I do!
-
-baseurl: https://adawolfs.github.io
+url: https://adawolfs.github.io
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
