@@ -4,10 +4,11 @@ title:      "Como asi que Docker!?"
 subtitle:   ""
 date:       2018-08-13 12:00:00
 author:     "adawolfs"
-header-img: "assets/img/2018-08-13-como-asi-que-docker/banner.jpg"
+header-img: "assets/img/docker/banner-1.jpg"
 catalog: true
 tags:
     - containers
+    - docker
 ---
 # Bueno y qué es un contenedor ?
 
@@ -30,12 +31,12 @@ Estas cualidades han hecho que docker se vea fuertemente involucrado en el desar
 En la siguiente imagen pueden observar un diagrama en el cual se denota la diferencia entre utilizar docker o un sistema de provisionamiento de maquinas virutales.
 
 
-![docker-vs-vm.jpg]({{"/assets/img/2018-08-13-como-asi-que-docker/docker-vs-vm.jpg" | absolute_url }})
+![docker-vs-vm.jpg]({{"/assets/img/docker/docker-vs-vm.jpg" | absolute_url }})
 
 
 En el siguiente esquema de bloques podemos ver como esta distribuida una arquitectura de Docker.
 
-<img src="https://www.docker.com/sites/default/files/styles/large/public/container-what-is-container.png" style="margin:0">
+![container-what-is-container.png]({{"/assets/img/docker/container-what-is-container.png" | absolute_url }})
 
 - Infraestructura: Hardware donde nuestro host esta instalado
 - Sistema Operativo Host: El sistema operativo que esta siendo ejecutado en la maquina Host, por lo regular Linux
