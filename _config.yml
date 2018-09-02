@@ -27,7 +27,7 @@ google-analytics:
 
 exclude: ['package.json', 'src' , 'node_modules']
 
-plugins: [jekyll-paginate, jekyll-terminal]
+plugins: [jekyll-paginate]
 
 
 permalink: pretty
