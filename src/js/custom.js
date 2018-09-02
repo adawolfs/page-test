@@ -9,4 +9,11 @@ $(document).ready(function () {
     var elementId = $(this).attr('element')
     $("#" + elementId).parent().show()
   })
+
+
+  //Fix terminal style by bootstrap conflict 
+  var terminalCloseBtn = $(".terminal > nav:first-of-type a.close")
+  terminalCloseBtn.removeClass("close")
+  terminalCloseBtn.addClass("closeBtn")
+  terminalCloseBtn.css('background', '#FD4E4B');
 })
