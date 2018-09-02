@@ -7,10 +7,18 @@ layout: blog/default
 <!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
 
 <!-- Post Header -->
+{% if page.shadow-header %}
+    {% assign shadow-value = page.shadow-header %}
+{% else %}
+    {% assign shadow-value = site.shadow-header %}
+{% endif %}
+
+{% assign first_time_visitor = true %}
+
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
+        background-image: linear-gradient( rgba(0, 0, 0, {{shadow-value}}), rgba(0, 0, 0, {{shadow-value}}) ), url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
 
     {% if page.header-mask %}
@@ -54,7 +62,7 @@ layout: blog/default
 
     <!-- Post Container -->
             <div class="
-                col-lg-8 col-lg-offset-2
+                col-lg-10 col-lg-offset-1
                 col-md-10 col-md-offset-1
                 post-container">
 
@@ -109,7 +117,7 @@ layout: blog/default
     <!-- Side Catalog Container -->
         {% if page.catalog %}
             <div class="
-                col-lg-2 col-lg-offset-0
+                col-lg-1 col-lg-offset-0
                 visible-lg-block
                 sidebar-container
                 catalog-container">
