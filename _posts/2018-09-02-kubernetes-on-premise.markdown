@@ -1,6 +1,6 @@
 ---
 layout:     blog/post
-title:      "Kubernetes on Premise"
+title:      "Kubernetes On-premise"
 subtitle:   ""
 date:       2018-09-02 12:00:00
 author:     "adawolfs"
