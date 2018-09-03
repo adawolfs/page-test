@@ -25,37 +25,37 @@ A continuación detallare lo necesario para tener un entorno de kubernetes listo
 Es un software para el control de versiones de código, ampliamente utilizado por empresas y desarrolladores para mantener su código fuente.
 
 # Vagrant
-Es una herramienta open source para crear y mantener software entornos de desarrollo virtuales portables. El cual nos permite provisionar intancias sobre virtualizadores como lo es VirtualBox, Docker, VMWare adicionando una capa de configuración por scripting.
+Es una herramienta open source para crear y mantener software entornos de desarrollo virtuales portables. El cual nos permite provisionar instancias sobre hipervisores como lo es VirtualBox, Docker, VMWare adicionando una capa de configuración por scripting.
 
 # VirtualBox
-Es un software para la virtualización a nivel de hardware el cual permite iniciar instancias de maquinas virtuales dentro de un host, de manera que se puedan alojar varios sistemas operativos dentro de una misma maquina en instancias completamente separadas.
+Es un software para la virtualización a nivel de hardware el cual permite iniciar instancias de máquinas virtuales dentro de un host, de manera que se puedan alojar varios sistemas operativos dentro de una misma máquina en instancias completamente separadas.
 
 # CentOS
 Es una distribución libre del sistema operativo Red Hat Enterprise Linux, el cual opera de manera muy similar debido a ser un fork directo del código original de Red Hat. Es altamente preferido en instalación de servidores por su robustez, estabilidad y facilidad de uso.
 
-He creado un repositorio con el código necesario para iniciar la maquina utilizando vagrant
+He creado un repositorio con el código necesario para iniciar la máquina utilizando vagrant
 
-# Clonar codigo desde git
+# Clonar código desde git
 {% highlight default %}
 $ git clone https://github.com/adawolfs/kubernetes.vagrant.git
 {% endhighlight %}
 
-# Iniciar maquina utilizando vagrant
+# Iniciar máquina utilizando vagrant
 {% highlight default %}
 $ cd kubernetes.vagrant
 $ vagrant up
 $ vagrant ssh
 {% endhighlight %}
 
-# Desabilitar Swap
-Para poder instalar kubernetes correctamente es necesario deshabilitar el swap para ello utilizare los siguientes comandos, con los cuales deshabilitare el swap y me asegurare de que no vuelva a habilitarse despues de reiniciar la maquina.
+# Deshabilitar Swap
+Para poder instalar kubernetes correctamente es necesario deshabilitar el swap para ello utilizare los siguientes comandos, con los cuales deshabilitare el swap y me asegurare de que no vuelva a habilitarse después de reiniciar la máquina.
 {% highlight default %}
 [vagrant@localhost]$ sudo swapoff -a 
 [vagrant@localhost]$ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 {% endhighlight %}
 
 # Instalar Docker
-El primer componente necesario para poder instalar kubernetes es docker, para ello utilizaré los siguentes comandos los cuales actualizaran los paquetes que ya hay instalados a su ultima version disponible, instalará docker y habilitara su servicio.
+El primer componente necesario para poder instalar kubernetes es docker, para ello utilizaré los siguientes comandos los cuales actualizaran los paquetes que ya hay instalados a su ultima version disponible, instalará docker y habilitara su servicio.
 {% highlight default %}
 [vagrant@localhost]$ sudo su
 [root@localhost]# yum upgrade -y
@@ -116,4 +116,4 @@ Lo primero que debe de hacerse es agregar el repositorio de kubernetes al sistem
 [root@localhost]# install -o 1000 /etc/kubernetes/admin.conf /home/$(id -nu 1000)/.kube/config
 {% endhighlight %}
 
-Con estos pasos kubernetes estará finalmente instalado en una maquina virtual y listo para ser utilizado.
+Con estos pasos kubernetes estará finalmente instalado en una máquina virtual y listo para ser utilizado.
