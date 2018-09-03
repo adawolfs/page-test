@@ -27,7 +27,7 @@ header-img: assets/img/quotes.jpg
     {% include blog/footer.html %}
 
 <script>
-  $('body').on('click', function(e) {
+  $('#quote-content').on('click', function(e) {
     e.preventDefault();
     $.ajax( {
       url: 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
