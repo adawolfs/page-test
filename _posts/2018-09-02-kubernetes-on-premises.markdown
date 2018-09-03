@@ -14,7 +14,7 @@ tags:
 
 # Descripción
 
-A continuación detallare lo necesario para tener un entorno de kubernetes listo para poder trabajar sobre el, para ello haré uso de las siguientes tecnologias, las cuales seran necesarias para este tutorial
+A continuación detallare lo necesario para tener un entorno de kubernetes listo para poder trabajar sobre el, para ello haré uso de las siguientes tecnologías, las cuales serán necesarias para este tutorial
 
 - [Git](https://git-scm.com/book/es/v1/Empezando-Instalando-Git)
 - [Vagrant](https://www.vagrantup.com/docs/index.html)
