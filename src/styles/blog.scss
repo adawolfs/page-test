@@ -627,6 +627,14 @@ pre code {
   }
 }
 
+@media (max-width: 400px) {
+  .navbar-custom {
+    .navbar-brand {
+     padding: 15px 10px;
+    }
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;
