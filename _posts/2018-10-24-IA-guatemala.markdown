@@ -4,7 +4,6 @@ title:      "IA Guatemala"
 subtitle:   ""
 date:       2018-10-24 12:00:00
 author:     "adawolfs"
-header-img: "assets/img/k8s/banner-1.jpg"
 shadow-header: "0.5"
 catalog: true
 tags:
