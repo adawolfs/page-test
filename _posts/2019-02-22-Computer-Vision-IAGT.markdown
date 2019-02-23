@@ -4,6 +4,7 @@ title:      "Computer Vision - IA Guatemala"
 subtitle:   ""
 date:       2019-02-22 12:00:00
 author:     "adawolfs"
+header-img: "assets/img/blog-banner-1.jpg"
 shadow-header: "0.5"
 catalog: true
 tags:
