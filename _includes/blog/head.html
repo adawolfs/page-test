@@ -4,9 +4,9 @@
   <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ site.description }}">
-  <meta name="keywords"  content="{{ site.keyword }}">
+  <meta name="keywords" content="{{ site.keyword }}">
   <meta name="theme-color" content="{{ site.chrome-tab-theme-color }}">
-  
+
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{page.title}}" />
@@ -20,12 +20,15 @@
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favico/chewbacca.ico">
-  
+
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ "/assets/css/blog.css" | prepend: site.baseurl }}">
@@ -36,7 +39,8 @@
   <!-- Custom Fonts -->
   <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
   <!-- Hux change font-awesome CDN to qiniu -->
-  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
 
 
 

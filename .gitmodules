@@ -1,0 +1,3 @@
+[submodule "jekyll-scripts"]
+	path = jekyll-scripts
+	url = https://github.com/mcinglis/jekyll-scripts.git
