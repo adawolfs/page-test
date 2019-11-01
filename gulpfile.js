@@ -33,14 +33,17 @@ function sass() {
 }
 
 
+const browserReload = function (done) {
+	browserSync.reload();
+	done()
+}
+
+
 /*
  * Rebuild Jekyll & reload browserSync
  */
-const jekyll_rebuild = series(jekyll_build,
-	function (done) {
-		browserSync.reload();
-		done()
-	})
+const jekyll_rebuild = series(jekyll_build, browserReload)
+
 
 /*
  * Build the jekyll site and launch browser-sync
@@ -48,6 +51,7 @@ const jekyll_rebuild = series(jekyll_build,
 const browserSyncTask = series(jekyll_build,
 	function () {
 		browserSync.init({
+			watch: true,
 			server: {
 				baseDir: '_site'
 			}
@@ -82,21 +86,22 @@ function imageminTask() {
 function js() {
 	return src('src/js/**/*.js')
 		.pipe(plumber())
-		//.pipe(concat('main.js'))
+		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(dest('assets/js/'))
 }
 
 task('watchTask', function () {
 	browserSync.init({
+		watch: true,
 		server: {
 			baseDir: '_site'
 		}
 	})
 	watch('src/styles/**/*.scss', series(sass, jekyll_rebuild));
-	watch('src/js/**/*.js', js);
+	watch('src/js/**/*.js', series(js, jekyll_rebuild));
 	watch('src/fonts/**/*.{tff,woff,woff2}', fonts);
-	watch('src/img/**/*.{jpg,png,gif}', imageminTask);
+	watch('src/img/**/*.{jpg,png,gif}', series(imageminTask, jekyll_rebuild));
 	watch(['*html', 'blog/*html', '_posts/*md', '_posts/*markdown', '_includes/**/*html', '_layouts/*.html'], jekyll_rebuild);
 })
 
@@ -104,7 +109,8 @@ exports.sass = sass;
 exports.js = js;
 exports.fonts = fonts;
 exports.browserSyncTask = browserSyncTask;
-exports.imagemin = imageminTask
+exports.imagemin = imageminTask;
+exports.browserReload = browserReload;
 // exports.watchTask = watchTask;
 exports.jekyll_build = jekyll_build;
 exports.default = parallel(js, sass, fonts, browserSyncTask)
