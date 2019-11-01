@@ -1,5 +1,5 @@
 #particles-js {
-  background: $main;
+  background: white;
   display: flex;
   vertical-align: bottom;
   width: 100%;
@@ -27,7 +27,7 @@
     font-size: 50px;
     display: block;
     line-height: 1;
-    color: #FFF;
+    color: #000;
     @media only screen and (min-width:$cut){
       margin: 0;
       font-size: 100px;
@@ -37,7 +37,7 @@
     font-size: 20px;
     display: block;
     line-height: 1;
-    color: #FFF;
+    color: #000000;
     margin-top: 10px;
     @media only screen and (min-width:$cut){
       font-size: 40px;
