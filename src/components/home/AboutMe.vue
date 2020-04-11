@@ -59,7 +59,6 @@ export default {
   },
   methods: {
     focusInput(isVisible) {
-      console.log(isVisible);
       if (isVisible) {
         this.$refs["magicInput"].focus();
       }
