@@ -3,7 +3,6 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <Header />
     <AboutMe />
-    <Expertice />
   </div>
 </template>
 
@@ -11,14 +10,12 @@
 // @ is an alias to /src
 import Header from "@/components/home/Header.vue";
 import AboutMe from "@/components/home/AboutMe.vue";
-import Expertice from "@/components/home/Expertice.vue";
 
 export default {
   name: "Home",
   components: {
     Header,
-    AboutMe,
-    Expertice
+    AboutMe
   }
 };
 </script>
