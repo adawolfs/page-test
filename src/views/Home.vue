@@ -1,18 +1,24 @@
 <template>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <DotBackground msg="Welcome to Your Vue.js App" />
+    <Header />
+    <AboutMe />
+    <Expertice />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import DotBackground from "@/components/DotBackground.vue";
+import Header from "@/components/home/Header.vue";
+import AboutMe from "@/components/home/AboutMe.vue";
+import Expertice from "@/components/home/Expertice.vue";
 
 export default {
   name: "Home",
   components: {
-    DotBackground
+    Header,
+    AboutMe,
+    Expertice
   }
 };
 </script>
@@ -20,5 +26,16 @@ export default {
 <style lang="scss">
 .home {
   height: 100%;
+}
+
+.wrap-banner {
+  position: relative;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  justify-content: center;
 }
 </style>
