@@ -19,7 +19,14 @@
       </div>
       <br />
       <div class="header-links">
-        <a class="link" href="#about" data-scroll>About Me</a>
+        <a
+          class="link"
+          href="#about"
+          @click.prevent
+          v-smooth-scroll="{
+            updateHistory: false
+          }"
+        >About Me</a>
         <a class="link" href="/blog">Blog</a>
       </div>
     </div>
@@ -56,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
-$main: #fff;
+$main: #000;
 $sec: #4b5664;
 $purple: #54516a;
 $cut: 550px;
@@ -169,9 +176,15 @@ h1 {
       background: #fff;
     }
     @media only screen and (min-width: $cut) {
-      width: 35px;
-      height: 35px;
-      font-size: 35px;
+      width: 60px;
+      height: 60px;
+      font-size: 60px;
+    }
+
+    @media only screen and (max-width: $cut) {
+      width: 40px;
+      height: 40px;
+      font-size: 40px;
     }
   }
 }

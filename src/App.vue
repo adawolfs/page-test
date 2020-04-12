@@ -14,6 +14,15 @@ body {
   height: 100%;
   margin: 0;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+  -ms-overflow-style: none;
+}
 
 #app {
   height: 100%;
