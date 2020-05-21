@@ -260,7 +260,6 @@ export default {
 }
 
 .content a {
-  pointer-events: all +++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    +---;
+  pointer-events: all;
 }
 </style>
