@@ -23,14 +23,14 @@
           <span class="site-description">DevOps & Software Developer</span>
         </h1>
         <div class="header-icons">
-          <a aria-label="Send email" href>
+          <a aria-label="Send email" :href="'mailto:' + $global.email">
             <font-awesome-icon class="icon" :icon="['fas', 'envelope']" aria-hidden="true" />
           </a>
           <!--a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a-->
-          <a aria-label="My Github" target="_blank" href="https://github.com/">
+          <a aria-label="My Github" target="_blank" :href="$global.github">
             <font-awesome-icon class="icon" :icon="['fab', 'github']" aria-hidden="true" />
           </a>
-          <a aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/">
+          <a aria-label="My Linkedin" target="_blank" :href="$global.linkedin">
             <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" aria-hidden="true" />
           </a>
         </div>
@@ -46,6 +46,7 @@
           >About Me</a>
           <a class="link" href="/blog">Blog</a>
         </div>
+        <font-awesome-icon class="icon" :icon="['fa', 'chevron-down']" aria-hidden="true" />
       </div>
     </vue-particles>
   </div>
@@ -56,6 +57,9 @@ import VueParticles from "@/components/vue-particles/vue-particles.vue";
 
 export default {
   name: "Header",
+  data: () => ({
+    // email: __GLOBAL__.email
+  }),
   components: {
     VueParticles
   },

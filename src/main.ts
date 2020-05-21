@@ -22,6 +22,12 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 
+Vue.prototype.$global = {
+  email: "adawolfs@gmail.com",
+  github: "https://github.com/adawolfs",
+  linkedin: "https://www.linkedin.com/in/alvin-estrada-868b22a5/",
+}
+
 new Vue({
   router,
   store,
