@@ -81,7 +81,6 @@ export default {
       }
     },
     typeScriptText(text, delay, i) {
-      console.log(i);
       if (i < text.length) {
         this.script += text.charAt(i);
         i++;
