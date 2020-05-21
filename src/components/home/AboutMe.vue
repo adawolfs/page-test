@@ -3,7 +3,14 @@
     <div class="content">
       <div class="icon" role="presentation" alt></div>
       <h1>Incognito?</h1>
-      <input v-b-visible="focusInput" type="text" ref="magicInput" class="magic-input" />
+      <input
+        v-b-visible="focusInput"
+        v-model="script"
+        v-on:keyup.enter="onEnter"
+        type="text"
+        ref="magicInput"
+        class="magic-input"
+      />
       <p id="subtitle">
         <span>I'm a FullStack Developer with experience creating DevOps Pipelines</span>
         <br />
@@ -23,7 +30,7 @@
           <ul>
             <li>Android, Flutter</li>
             <li>Laravel, Django, Rails</li>
-            <li>Vue, Angular, React</li>
+            <li>Vue, React</li>
           </ul>
         </div>
         <div class="bulletpoints">
@@ -50,6 +57,9 @@
 <script>
 export default {
   name: "AboutMe",
+  data: () => ({
+    script: ""
+  }),
   directives: {
     focus: {
       inserted: function(el) {
@@ -60,8 +70,26 @@ export default {
   methods: {
     focusInput(isVisible) {
       if (isVisible) {
+        if (!this.script) {
+          this.typeScriptText(
+            "I am not an expert but I've watched a lot of youtube videos!",
+            100,
+            0
+          );
+        }
         this.$refs["magicInput"].focus();
       }
+    },
+    typeScriptText(text, delay, i) {
+      console.log(i);
+      if (i < text.length) {
+        this.script += text.charAt(i);
+        i++;
+        setTimeout(this.typeScriptText, delay, text, delay, i);
+      }
+    },
+    onEnter() {
+      this.script = "";
     }
   }
 };
@@ -224,9 +252,9 @@ h1 {
     margin-inline-start: 0;
   } */
 
-  h1 {
+  /* h1 {
     text-align: start;
-  }
+  } */
 }
 
 /** Paddings and margins ---------------------------------------------------- */

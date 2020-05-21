@@ -1,35 +1,5 @@
 <template>
   <div class="wrap-banner">
-    <div class="main-title header">
-      <h1>
-        <span class="site-title">Alvin Estrada</span>
-        <span class="site-description">DevOps & Software Developer</span>
-      </h1>
-      <div class="header-icons">
-        <a aria-label="Send email" href>
-          <font-awesome-icon class="icon" :icon="['fas', 'envelope']" aria-hidden="true" />
-        </a>
-        <!--a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a-->
-        <a aria-label="My Github" target="_blank" href="https://github.com/">
-          <font-awesome-icon class="icon" :icon="['fab', 'github']" aria-hidden="true" />
-        </a>
-        <a aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/">
-          <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" aria-hidden="true" />
-        </a>
-      </div>
-      <br />
-      <div class="header-links">
-        <a
-          class="link"
-          href="#about"
-          @click.prevent
-          v-smooth-scroll="{
-            updateHistory: false
-          }"
-        >About Me</a>
-        <a class="link" href="/blog">Blog</a>
-      </div>
-    </div>
     <vue-particles
       color="#ffffff"
       :particleOpacity="1"
@@ -40,13 +10,44 @@
       :linesWidth="0.6"
       :lineLinked="true"
       :lineOpacity="1"
-      :linesDistance="200"
-      :moveSpeed="2"
+      :linesDistance="80"
+      :moveSpeed="6"
       :hoverEffect="true"
       hoverMode="grab"
       :clickEffect="true"
       clickMode="push"
-    ></vue-particles>
+    >
+      <div class="main-title header">
+        <h1>
+          <span class="site-title">Alvin Estrada</span>
+          <span class="site-description">DevOps & Software Developer</span>
+        </h1>
+        <div class="header-icons">
+          <a aria-label="Send email" href>
+            <font-awesome-icon class="icon" :icon="['fas', 'envelope']" aria-hidden="true" />
+          </a>
+          <!--a aria-label="My Twitter" target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i class="icon fa fa-twitter" aria-hidden="true"></i></a-->
+          <a aria-label="My Github" target="_blank" href="https://github.com/">
+            <font-awesome-icon class="icon" :icon="['fab', 'github']" aria-hidden="true" />
+          </a>
+          <a aria-label="My Linkedin" target="_blank" href="https://www.linkedin.com/in/">
+            <font-awesome-icon class="icon" :icon="['fab', 'linkedin']" aria-hidden="true" />
+          </a>
+        </div>
+        <br />
+        <div class="header-links">
+          <a
+            class="link"
+            href="#about"
+            @click.prevent
+            v-smooth-scroll="{
+            updateHistory: false
+          }"
+          >About Me</a>
+          <a class="link" href="/blog">Blog</a>
+        </div>
+      </div>
+    </vue-particles>
   </div>
 </template>
 
@@ -85,8 +86,8 @@ html {
 }
 
 .main-title {
+  padding-top: 120px;
   color: #fff;
-  z-index: 999;
 }
 
 @media only screen and (min-width: 550px) {
@@ -156,6 +157,7 @@ h1 {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-top: 50px;
   .icon {
     text-align: center;
     color: #fff;

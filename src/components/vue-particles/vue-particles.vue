@@ -17,7 +17,11 @@
     :hoverMode="hoverMode"
     :clickEffect="clickEffect"
     :clickMode="clickMode"
-  ></div>
+  >
+    <div class="content">
+      <slot></slot>
+    </div>
+  </div>
 </template>
 <script>
 /* eslint-disable */
@@ -249,3 +253,14 @@ export default {
 };
 /* eslint-disable */
 </script>
+
+<style lang="scss" scoped>
+.content {
+  pointer-events: none;
+}
+
+.content a {
+  pointer-events: all +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    +---;
+}
+</style>
