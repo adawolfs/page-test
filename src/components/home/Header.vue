@@ -46,9 +46,18 @@
           >About Me</a>
           <a class="link" href="/blog">Blog</a>
         </div>
-        <font-awesome-icon class="icon" :icon="['fa', 'chevron-down']" aria-hidden="true" />
       </div>
     </vue-particles>
+    <a
+      class="down"
+      href="#about"
+      @click.prevent
+      v-smooth-scroll="{
+            updateHistory: false
+          }"
+    >
+      <font-awesome-icon class="icon" :icon="['fa', 'chevron-down']" aria-hidden="true" />
+    </a>
   </div>
 </template>
 
@@ -194,11 +203,27 @@ h1 {
     }
   }
 }
+@keyframes pulse {
+  0%,
+  to {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    filter: alpha(opacity=40);
+    /* opacity:.4; */
+    /* top:0; */
+  }
 
+  50% {
+    -ms-filter: none;
+    -webkit-filter: none;
+    filter: none;
+    opacity: 1;
+    top: -10px;
+  }
+}
 .down {
   color: #fff;
   position: absolute;
-  bottom: 25px;
+  bottom: 50px;
   width: 100%;
   margin: 0 auto;
   display: block;
@@ -213,8 +238,6 @@ h1 {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
     fill: #fff;
     -webkit-animation: pulse 1.3s infinite;
     animation: pulse 1.3s infinite;
